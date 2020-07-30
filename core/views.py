@@ -19,6 +19,7 @@ def checkout(request):
 
 class HomeView(ListView):
     model = Item
+    paginate_by = 10
     template_name = "home.html"
 
 
@@ -42,6 +43,7 @@ def add_to_cart(request, slug):
             order_item.quantity += 1
             order_item.save()
             messages.info(request, "This item quantity was updated")
+            return redirect("core:product", slug=slug)
         else:
             messages.info(
                 request, "This item has been successfully added to your cart")
