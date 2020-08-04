@@ -5,7 +5,10 @@ ENVIRONMENT = os.getenv('ENVIRONMENT', 'development')
 DEBUG = True
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-05sgp9!deq=q1nltm@^^2cc+v29i(tyybv3v2t77qi66czazj'
-STRIPE_SECRET_KEY = "sk_test_4eC39HqLyjWDarjtT1zdp7dc"
+# STRIPE_SECRET_KEY = "sk_test_4eC39HqLyjWDarjtT1zdp7dc"
+STRIPE_TEST_PUBLIC_KEY = "pk_test_51HCPjRH1COjpS8d97eNXYNUqxpcLKTPh2k1A0kOaiubiUVBxAMWCDF0W7UIjIsbsICoilk3NQytANvYhFlZi0Mlc00aw8QkOWK"
+STRIPE_TEST_SECRET_KEY = "sk_test_51HCPjRH1COjpS8d9AkvQ0Boi9CeC3rcWn4SUJiPrEUEf76lnmZftMLabLYoAFhng8j2k6peDfSjfAU7FsSSrEYeJ00c0NIU4vk"
+
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
@@ -72,6 +75,9 @@ DATABASES = {
         "NAME": os.path.join(BASE_DIR, 'db.sqlite3')
     }
 }
+
+STRIPE_PUBLIC_KEY = STRIPE_TEST_PUBLIC_KEY
+STRIPE_SECRET_KEY = STRIPE_TEST_SECRET_KEY
 
 if ENVIRONMENT == 'production':
     DEBUG = False
