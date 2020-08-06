@@ -35,6 +35,15 @@ def is_valid_form(values):
             valid = False
     return valid
 
+def featured_item(request):
+    featured_items_list = Item.objects.filter(featured=True).order_by('-featured')
+    context = {
+        'featured_items_list': featured_items_list
+    }
+    return render(request, 'product.html', context)
+
+
+
 
 class CheckoutView(View):
     def get(self, *args, **kwargs):

@@ -22,32 +22,35 @@
       <div class="collapse navbar-collapse" id="basicExampleNav">
 
         <!-- Links -->
+        
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#">All
               <span class="sr-only">(current)</span>
             </a>
           </li>
+          {% for category in category_list %}
           <li class="nav-item">
-            <a class="nav-link" href="#">Shirts</a>
+            <a class="nav-link" href="#">{{ category.get_categories }}</a>
           </li>
-          <li class="nav-item">
+          {% endfor %}
+          {% comment %} <li class="nav-item">
             <a class="nav-link" href="#">Sport wears</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Outwears</a>
-          </li>
-
+          </li> {% endcomment %}
+        
         </ul>
         <!-- Links -->
 
-        <form class="form-inline">
+        {% comment %} <form class="form-inline">
           <div class="md-form my-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
           </div>
         </form>
       </div>
-      <!-- Collapsible content -->
+      <!-- Collapsible content --> {% endcomment %}
 
     </nav>
     <!--/.Navbar-->

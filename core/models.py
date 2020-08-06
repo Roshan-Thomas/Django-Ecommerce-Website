@@ -41,6 +41,7 @@ class Item(models.Model):
     slug = models.SlugField()
     description = models.TextField()
     image = models.ImageField()
+    featured = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
@@ -59,6 +60,13 @@ class Item(models.Model):
         return reverse("core:remove_from_cart", kwargs={
             'slug': self.slug
         })
+    
+    def get_categories(self):
+        return CATEGORY_CHOICES
+
+    def is_featured(self):
+        if featured:
+            return self.featured
 
 
 class OrderItem(models.Model):
