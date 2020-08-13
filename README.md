@@ -2,7 +2,16 @@
 
 This repository is an ecommerce website using Django as the backend. 
 
-![Thumbnail](https://github.com/roshanthomas-tamuq/django-ecommerce-website/blob/master/thumbnail.png)
+![Thumbnail](./images/thumbnail.png)
+
+## Screenshots
+
+![Thumbnail](./images/landing-page.png)
+![Thumbnail](./images/order-summary.png)
+![Thumbnail](./images/product-page.png)
+![Thumbnail](./images/payment-page.png)
+![Thumbnail](./images/admin-page.png)
+![Thumbnail](./images/signup-page.png)
 
 ## Getting started (Windows)
 <hr>
