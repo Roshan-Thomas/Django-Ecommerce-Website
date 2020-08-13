@@ -14,7 +14,7 @@ This repository is an ecommerce website using Django as the backend.
 ![Thumbnail](./images/signup-page.png)
 
 ## Getting started (Windows)
-<hr>
+
 Steps:
 
 1. Clone/pull/download this repository
